@@ -1,3 +1,4 @@
+import Img from 'next/image';
 import React from 'react'
 
 const Watches = () => {
@@ -14,7 +15,7 @@ const Watches = () => {
       <div className="watches">
         {watchData.map((watch) => (
 <div key={watch.id} className="watch-card">
-  <img src={watch.image} alt={watch.name}/>
+  <Img src={watch.image} alt={watch.name} width={600} height={400}/>
   <h3>{watch.name}</h3>
   <p>{watch.description}</p>
   <div className="price">${watch.price}</div>
